@@ -1,0 +1,5 @@
+nvidia-openrc (0.0.1)  nitrux; urgency=medium
+
+  * Create package.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Wed, 06 Nov 2024 04:46:00 -0500

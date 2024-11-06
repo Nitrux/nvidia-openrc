@@ -1,0 +1,10 @@
+#!/sbin/openrc-run
+
+description="NVIDIA system resume actions"
+
+start() {
+    ebegin "Running NVIDIA system resume actions"
+    /usr/bin/logger -t resume -s "nvidia-resume.service"
+    /usr/bin/nvidia-sleep.sh "resume"
+    eend $?
+}

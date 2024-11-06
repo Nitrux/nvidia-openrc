@@ -1,0 +1,11 @@
+#!/sbin/openrc-run
+
+description="nvidia-powerd service"
+command="/usr/bin/nvidia-powerd"
+command_background="yes"
+
+depend() {
+    need localmount
+    after bootmisc
+    use logger
+}
