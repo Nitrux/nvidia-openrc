@@ -1,3 +1,9 @@
+nvidia-openrc (0.0.3)  nitrux; urgency=medium
+
+  * Remove non-working files.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 16 Nov 2024 14:24:00 -0500
+
 nvidia-openrc (0.0.2)  nitrux; urgency=medium
 
   * Fix service dependency.
