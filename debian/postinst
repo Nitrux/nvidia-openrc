@@ -2,9 +2,6 @@
 
 # -- Add service to runlevel.
 
-rc-update add nvidia-suspend async
-rc-update add nvidia-resume async
-rc-update add nvidia-hibernate async
 rc-update add nvidia-powerd async
 
 # -- Update services list.
