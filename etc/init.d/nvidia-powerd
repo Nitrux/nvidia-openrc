@@ -3,6 +3,7 @@
 description="nvidia-powerd service"
 command="/usr/bin/nvidia-powerd"
 command_background="yes"
+pidfile="/run/nvidia-powerd.pid"
 
 depend() {
     need mountall
