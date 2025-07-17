@@ -1,11 +1,15 @@
 #!/sbin/openrc-run
+# Copyright (c) 2007-2021 The Gentoo Foundation
+# Distributed under the terms of the GNU General Public License v2
 
-description="nvidia-powerd service"
+description="Manages dynamic power states for NVIDIA GPUs"
 command="/usr/bin/nvidia-powerd"
 command_background="yes"
 pidfile="/run/nvidia-powerd.pid"
 
 depend() {
-    need mountall
-    after bootmisc
+	# This daemon requires the NVIDIA kernel modules to be loaded.
+	need modules
+	# It should start after the basic system is up.
+	after localmount
 }
