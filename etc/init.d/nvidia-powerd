@@ -2,12 +2,9 @@
 
 description="Manages dynamic power states for NVIDIA GPUs"
 command="/usr/bin/nvidia-powerd"
-command_background="yes"
-pidfile="/run/nvidia-powerd.pid"
+supervisor=supervise-daemon
 
 depend() {
-	# This daemon requires the NVIDIA kernel modules to be loaded.
 	need modules
-	# It should start after the basic system is up.
 	after localmount
 }
