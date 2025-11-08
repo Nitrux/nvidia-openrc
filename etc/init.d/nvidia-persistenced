@@ -1,0 +1,20 @@
+#!/sbin/openrc-run
+
+description="NVIDIA Persistence Daemon"
+command="/usr/bin/nvidia-persistenced"
+supervisor=supervise-daemon
+command_user="nvpd:nvpd"
+
+depend() {
+	need modules
+	after localmount
+	use logger
+}
+
+start_pre() {
+	checkpath -d -m 0755 -o nvpd:nvpd /run/nvidia-persistenced
+}
+
+stop_post() {
+	rm -rf /run/nvidia-persistenced
+}

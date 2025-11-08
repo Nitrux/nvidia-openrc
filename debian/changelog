@@ -1,3 +1,9 @@
+nvidia-openrc (0.0.9)  nitrux; urgency=medium
+
+  * Add nvidia-persistenced service.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 08 Nov 2025 14:22:00 -0500
+
 nvidia-openrc (0.0.8)  nitrux; urgency=medium
 
   * Use supervise-daemon for daemons.
