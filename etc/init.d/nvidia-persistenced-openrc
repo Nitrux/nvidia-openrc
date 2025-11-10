@@ -2,8 +2,8 @@
 
 description="NVIDIA Persistence Daemon"
 command="/usr/bin/nvidia-persistenced"
-supervisor=supervise-daemon
-command_user="nvpd:nvpd"
+command_args="--user nvpd"
+pidfile="/run/nvidia-persistenced/nvidia-persistenced.pid"
 
 depend() {
 	need modules
@@ -12,7 +12,7 @@ depend() {
 }
 
 start_pre() {
-	checkpath -d -m 0755 -o nvpd:nvpd /run/nvidia-persistenced
+	checkpath -d -m 0755 /run/nvidia-persistenced
 }
 
 stop_post() {

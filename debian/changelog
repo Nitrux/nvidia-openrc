@@ -1,3 +1,9 @@
+nvidia-openrc (0.1.1)  nitrux; urgency=medium
+
+  * Use start-stop-daemon for nvidia-persistenced because it requires a pidfile.
+
+ -- Uri Herrera <uri_herrera@nxos.org>  Sat, 08 Nov 2025 16:33:00 -0500
+
 nvidia-openrc (0.1.0)  nitrux; urgency=medium
 
   * Rename nvidia-persistenced service.
